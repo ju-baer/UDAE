@@ -1,5 +1,13 @@
 # UDAE: Adaptive Uncertainty-Driven Reinforcement Learning for Safe and Efficient Autonomous Driving
 
+Welcome to the frontier of autonomous driving research! This repository presents **UDAE**—an interesting approach that redefines safety and efficiency in reinforcement learning (RL) for self-driving vehicles. UDAE (Uncertainty-Driven Adaptive Exploration) introduces a novel paradigm by leveraging ensemble-based uncertainty estimation to guide exploration in RL, ensuring that autonomous agents not only navigate complex urban environments with precision but also prioritize safety in unpredictable scenarios.
+
+What sets UDAE apart? Traditional RL methods often struggle with the trade-off between exploration and safety, especially in high-stakes domains like autonomous driving. UDAE tackles this challenge head-on by dynamically adapting its exploration strategy based on uncertainty. It also enables the agent to cautiously explore unfamiliar scenarios (e.g., sudden pedestrian crossings) while confidently exploiting known patterns (e.g., routine urban navigation).
+
+## About This Repository
+
+This repository contains the code, data, and pre-trained models for the project *"UDAE: Adaptive Uncertainty-Driven Reinforcement Learning for Safe and Efficient Autonomous Driving"*. 
+
 
 ## Setup
 1. Install CARLA (version 0.9.13): [https://carla.readthedocs.io/en/latest/start_quickstart/](https://carla.readthedocs.io/en/latest/start_quickstart/)
@@ -23,6 +31,7 @@
 - `test_setups/`: Scripts to replicate experiments.
 - `data_generation/`: Scripts to generate sample datasets.
 - `baselines/`: Implementations of baseline methods.
+- `evaluation/`: Scripts to evaluate results.
 
 
 ## Data
