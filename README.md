@@ -5,18 +5,25 @@
 1. Install CARLA (version 0.9.13): [https://carla.readthedocs.io/en/latest/start_quickstart/](https://carla.readthedocs.io/en/latest/start_quickstart/)
 2. Install Python dependencies: `pip install -r requirements.txt`
 3. Configure CARLA settings as described in the `data/` folder.
+4. Recommended Python version: 3.9.13
 
+   
 ## Running Tests
 - Urban navigation task: `python test_setups/urban_navigation.py`
 - Emergency avoidance scenario: `python test_setups/emergency_avoidance.py`
 - Train UDAE: `python train_uda.py`
   - Outputs a trained model at `uda_model.pth`.
+- Run epsilon-greedy baseline: `python baselines/epsilon_greedy.py`
+- Evaluate success rates: `python evaluation/evaluate_results.py`
+  - Outputs success rates and a plot (`success_rates.pdf`).
 
 ## Code Structure
 - `carla_scripts/`: Scripts to set up CARLA environments.
 - `dqn_ensemble/`: UDAE implementation with DQN ensemble.
 - `test_setups/`: Scripts to replicate experiments.
 - `data_generation/`: Scripts to generate sample datasets.
+- `baselines/`: Implementations of baseline methods.
+
 
 ## Data
 - `data/carla_settings/`: JSON files for CARLA traffic and weather configurations.
