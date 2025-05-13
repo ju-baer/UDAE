@@ -10,7 +10,7 @@
 - Emergency avoidance scenario: `python test_setups/emergency_avoidance.py`
 
 ## Code Structure
-- `carla_scripts/`: Scripts to set up CARLA environments.
+- `carla-scripts/`: Scripts to set up CARLA environments.
 - `dqn_ensemble/`: UDAE implementation with DQN ensemble.
 - `test_setups/`: Scripts to replicate experiments.
 
