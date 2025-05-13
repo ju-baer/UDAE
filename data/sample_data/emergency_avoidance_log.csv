@@ -1,0 +1,4 @@
+timestep,x_position,y_position,action,reward
+450,50.0,10.0,1,1.0
+500,50.0,10.0,0,2.0
+550,50.5,10.2,1,1.5
