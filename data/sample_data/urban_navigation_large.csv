@@ -1,5 +1,4 @@
 timestep,x_position,y_position,action,reward,uncertainty
 0,10.0,5.0,1,1.0,0.02
 1,10.5,5.2,2,0.8,0.03
-...
-4999,2510.0,1255.0,1,1.2,0.01
+
