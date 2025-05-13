@@ -34,7 +34,6 @@ def run_epsilon_greedy():
         if done:
             break
 
-    # Save log
     with open('../data/sample_data/epsilon_greedy_log.csv', 'w', newline='') as f:
         writer = csv.writer(f)
         writer.writerow(['timestep', 'x_position', 'y_position', 'action', 'reward', 'uncertainty'])
