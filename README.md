@@ -1,1 +1,20 @@
-# UDAE
+# UDAE: Adaptive Uncertainty-Driven Reinforcement Learning for Safe and Efficient Autonomous Driving
+
+
+## Setup
+1. Install CARLA (version X.X.X): [link to CARLA installation guide]
+2. Install Python dependencies: `pip install -r requirements.txt`
+3. Configure CARLA settings as described in the `data/` folder.
+
+## Running Tests
+- Urban navigation task: `python test_setups/urban_navigation.py`
+- Emergency avoidance scenario: `python test_setups/emergency_avoidance.py`
+
+## Code Structure
+- `carla_scripts/`: Scripts to set up CARLA environments.
+- `dqn_ensemble/`: UDAE implementation with DQN ensemble.
+- `test_setups/`: Scripts to replicate experiments.
+
+## Data
+- `data/carla_settings/`: JSON files for CARLA traffic and weather configurations.
+- `data/sample_data/`: Sample logs to run tests without CARLA (if desired).
