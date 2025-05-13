@@ -3,6 +3,9 @@ from carla_scripts.setup_simulation import setup_carla_simulation
 from carla_scripts.environment import CarlaEnvironment
 from dqn_ensemble.uda_model import UDAE
 
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
+
 def run_emergency_avoidance():
     world = setup_carla_simulation()
     env = CarlaEnvironment(world)
@@ -13,7 +16,15 @@ def run_emergency_avoidance():
             print("Pedestrian crossing detected!")
         action = model.get_action(state, epsilon=0.1)
         state = env.get_state()
-        print(f"Timestep {t}, State: {state}, Action: {action}")
+         logger.info(f"Timestep {t}, State: {state}, Action: {action}, Reward: {reward}")
+            if done:
+                logger.info("Episode ended early due to collision.")
+                break
+    except Exception as e:
+        logger.error(f"Error during emergency avoidance: {e}")
+        raise
+    finally:
+        cleanup_actors(world)
 
 if __name__ == '__main__':
     run_emergency_avoidance()
