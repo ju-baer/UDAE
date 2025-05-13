@@ -13,3 +13,7 @@
 - `carla_scripts/`: Scripts to set up CARLA environments.
 - `dqn_ensemble/`: UDAE implementation with DQN ensemble.
 - `test_setups/`: Scripts to replicate experiments.
+
+## Data
+- `data/carla_settings/`: JSON files for CARLA traffic and weather configurations.
+- `data/sample_data/`: Sample logs to run tests without CARLA (if desired).
