@@ -1,4 +1,5 @@
 import numpy as np
+import csv
 from carla_scripts.environment import CarlaEnvironment
 
 class EpsilonGreedy:
@@ -14,7 +15,7 @@ class EpsilonGreedy:
         epsilon = self.epsilon_end + (self.epsilon_start - self.epsilon_end) * (1 - min(self.step / self.decay_steps, 1))
         if np.random.rand() < epsilon:
             return np.random.randint(self.action_dim)
-        return 1  # Simplified: always choose action 1 (accelerate) when not exploring
+        return 1
 
 def run_epsilon_greedy():
     from carla_scripts.setup_simulation import setup_carla_simulation, cleanup_actors
@@ -23,13 +24,21 @@ def run_epsilon_greedy():
     agent = EpsilonGreedy(action_dim=4)
 
     state = env.reset()
+    data = []
     for t in range(1000):
         action = agent.get_action(state)
         next_state, reward, done = env.step(action)
+        data.append([t, next_state[0], next_state[1], action, reward, 0.0])  # Uncertainty not used
         state = next_state
         print(f"Timestep {t}, Action: {action}, Reward: {reward}")
         if done:
             break
+
+    # Save log
+    with open('../data/sample_data/epsilon_greedy_log.csv', 'w', newline='') as f:
+        writer = csv.writer(f)
+        writer.writerow(['timestep', 'x_position', 'y_position', 'action', 'reward', 'uncertainty'])
+        writer.writerows(data)
 
     cleanup_actors(world)
 
