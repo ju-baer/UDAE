@@ -8,14 +8,6 @@ def run_urban_navigation():
     world = setup_carla_simulation()
     env = CarlaEnvironment(world)
     model = UDAE(state_dim=3, action_dim=4)
-    
-    try:
-        model.load_state_dict(torch.load('../models/uda_model.pth'))
-        print("Loaded pre-trained model.")
-    except FileNotFoundError:
-        print("No pre-trained model found. Using untrained model.")
-
-    state = env.reset()
     for t in range(1000):
         action = model.get_action(state, epsilon=0.1)
         state, reward, done = env.step(action)
