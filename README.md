@@ -26,7 +26,7 @@ This repository contains the code, data, and pre-trained models for the project 
   - Outputs success rates and a plot (`success_rates.pdf`).
 
 ## Code Structure
-- `carla_scripts/`: Scripts to set up CARLA environments.
+- `carla-scripts/`: Scripts to set up CARLA environments.
 - `dqn_ensemble/`: UDAE implementation with DQN ensemble.
 - `test_setups/`: Scripts to replicate experiments.
 - `data_generation/`: Scripts to generate sample datasets.
