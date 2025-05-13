@@ -1,3 +1,6 @@
+python==3.9.13
 numpy==1.23.5
 torch==1.13.1
 carla==0.9.13
+pandas==1.5.3
+matplotlib==3.6.2
