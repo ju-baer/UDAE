@@ -9,6 +9,8 @@
 ## Running Tests
 - Urban navigation task: `python test_setups/urban_navigation.py`
 - Emergency avoidance scenario: `python test_setups/emergency_avoidance.py`
+- Train UDAE: `python train_uda.py`
+  - Outputs a trained model at `uda_model.pth`.
 
 ## Code Structure
 - `carla_scripts/`: Scripts to set up CARLA environments.
