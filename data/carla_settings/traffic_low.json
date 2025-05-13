@@ -1,0 +1,6 @@
+{
+    "traffic_density": 10,
+    "num_vehicles": 20,
+    "num_pedestrians": 5,
+    "description": "Low traffic density for urban navigation task"
+}
