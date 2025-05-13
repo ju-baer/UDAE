@@ -14,6 +14,11 @@
 - `dqn_ensemble/`: UDAE implementation with DQN ensemble.
 - `test_setups/`: Scripts to replicate experiments.
 
+
 ## Data
 - `data/carla_settings/`: JSON files for CARLA traffic and weather configurations.
 - `data/sample_data/`: Sample logs to run tests without CARLA (if desired).
+- `urban_navigation_log.csv`: 1000 timesteps from the urban navigation task.
+- `urban_navigation_large.csv`: 5000 timesteps for a longer urban navigation run.
+- `emergency_avoidance_log.csv`: 101 timesteps for a single emergency avoidance scenario.
+- `emergency_avoidance_multiple.csv`: 505 timesteps covering 5 emergency avoidance scenarios.
