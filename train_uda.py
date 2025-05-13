@@ -22,7 +22,6 @@ def train_uda(episodes=1000, save_path='uda_model.pth'):
             episode_reward += reward
         print(f"Episode {episode + 1}/{episodes}, Reward: {episode_reward}")
 
-    # Save the trained model
     torch.save(model.state_dict(), save_path)
     print(f"Saved trained model to {save_path}")
     cleanup_actors(world)
